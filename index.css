@@ -1,0 +1,11 @@
+#input_space {
+    float: left;
+    width: 50%;
+    background-color: #F0F0F0;
+}
+#output_space{
+    float: right;
+    width: 50%;
+    margin-left: -200px;
+    background-color: #CCCCCC;
+}
