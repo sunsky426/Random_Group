@@ -6,7 +6,8 @@
         <title>Random Group</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="./index.css">
     </head>
     <body>
         <div>
@@ -16,26 +17,26 @@
         <div>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, officiis quaerat laboriosam fugit quisquam mollitia molestias nisi expedita quidem ducimus debitis vero eaque amet id laudantium soluta commodi, maxime autem!
         </div>
-        <div>
+        <div id="input_space">
             <form>
                 <p>
-                    <textarea name="" id="" cols="50" rows="10"></textarea>
+                    <textarea name="" id="names" cols="50" rows="10"></textarea>
                 </p>
                 <p>
-                    <input type="number">
+                    <input id="group" type="number">
                 </p>
                 <p>
-                    <button>Make Groups</button>
+                    <button onclick="make_groups();">Make Groups</button>
                 </p>
             </form>
         </div>
-        <div>
+        <div id="output_space">
             <ul>
                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio</li>
                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio</li>
                 <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio</li>
             </ul>
         </div>
-        <script src="index.js" async defer></script>
+        <script src="./index.js" async defer></script>
     </body>
 </html>
