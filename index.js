@@ -1,17 +1,16 @@
 async function make_groups(){
-    alert("function called")
+    alert("function called");
     let names = extract_names();
-    alert(names)
+    alert(names);
     let body = await extract_random(1, names.length);
     let groupd = group_names(names, body, 6);
     //alert(groupd)
-    console.log(groupd)
+    console.log(groupd);
 }
 
 async function extract_random(min, max){
     //Extract a true random sequence of integer by sending a http request to random.org
     let url = `https://www.random.org/sequences/?min=${min}&max=${max}&col=1&format=plain&rnd=new`;
-    alert(url);
 
     let xmlHttpReq = new XMLHttpRequest();
     xmlHttpReq.open("GET", url, false);
@@ -19,8 +18,8 @@ async function extract_random(min, max){
     xmlHttpReq.send(null);
     let body = xmlHttpReq.responseText;
     
-    console.log(body)
-    return body.split("\n").map(Number)
+    console.log(body);
+    return body.split("\n").map(Number);
 }
 
 function extract_names(){
@@ -44,5 +43,9 @@ function group_names(names, numbers){
         output[output.length - 1].push(names[i]);
     }
     
-    return output
+    return output;
+}
+
+function display_output(){
+    
 }
