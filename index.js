@@ -13,12 +13,11 @@ async function extract_random(min, max){
     let url = `https://www.random.org/sequences/?min=${min}&max=${max}&col=1&format=plain&rnd=new`;
     alert(url);
 
-    let body = await fetch(url)
-        .then(function(response) {
-            return response.text();
-        }).then(function(data) {
-            return data; // this will be a string
-        });
+    let xmlHttpReq = new XMLHttpRequest();
+    xmlHttpReq.open("GET", url, false);
+
+    xmlHttpReq.send(null);
+    let body = xmlHttpReq.responseText;
     
     console.log(body)
     return body.split("\n").map(Number)
@@ -27,17 +26,22 @@ async function extract_random(min, max){
 function extract_names(){
     let raw_text = names.value;
     let text_vec = raw_text.split("\n");
-    return text_vec
+    return text_vec;
 }
 
 function group_names(names, numbers){
-    let group_num = group.value;
-    let asignd_group = numbers.map(function(x){x % group_num});
+    let group_size = numbers.length % group.value;
 
-    let output;
+    let output = new Array();
+    let count = group_size;
 
-    for(i of range(0, names.length)){
-        output[asignd_group[i]].push(names[i]);
+    for (i of numbers){
+        if (count == group_size){
+            output.push(new Array());
+            count = 0;
+        }
+        count++;
+        output[output.length - 1].push(names[i]);
     }
     
     return output
