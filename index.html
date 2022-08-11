@@ -6,37 +6,64 @@
         <title>Random Group</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="shortcut icon" href="#">
-        <link rel="stylesheet" href="./index.css">
+        <link href="./css/common-elements.css" rel="stylesheet" type="text/css">
+        <link href="./css/custom-elements.css" rel="stylesheet" type="text/css">
+        <link href="./css/custom-elements-btn.css" rel="stylesheet" type="text/css" charset="UTF-8">
     </head>
+
+    <style>	
+        #left {
+            position:absolute;
+            left:0px;
+            bottom:0px;
+        }
+        #center {
+            position:absolute;
+            left:50%;
+            margin-left:-100px;
+            bottom:0px;
+        }
+        #right {
+            position:absolute;
+            right:0px;
+            bottom:0px;
+        }
+    
+    </style>
+
     <body>
-        <div>
-            <h1>Random Group</h1>
-            <h2>the True Random Group Generator</h2>
-        </div>
-        <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, officiis quaerat laboriosam fugit quisquam mollitia molestias nisi expedita quidem ducimus debitis vero eaque amet id laudantium soluta commodi, maxime autem!
-        </div>
-        <div id="input_space">
-            <form>
-                <p>
-                    <textarea name="" id="names" cols="50" rows="10"></textarea>
-                </p>
-                <p>
-                    <input id="group" type="number">
-                </p>
-                <p>
-                    <button onclick="make_groups();">Make Groups</button>
-                </p>
-            </form>
-        </div>
-        <div id="output_space">
-            <ul>
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio</li>
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio</li>
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio</li>
-            </ul>
-        </div>
+        <div><center>
+            <div>
+                <h1>Random Group</h1>
+                <h2>the True Random Group Generator</h2>
+            </div>
+            <div>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, officiis quaerat laboriosam fugit quisquam mollitia molestias nisi expedita quidem ducimus debitis vero eaque amet id laudantium soluta commodi, maxime autem!
+            </div>
+        </center></div>
+        <main><div align="center" height="100%">
+            <div id="input_space">
+                <form id="form" method="POST" action="input-step1.jsp" enctype="multipart/form-data">
+                    <p>
+                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">input students names:</span></label>
+                        <textarea name="" id="names" cols="50" rows="10"></textarea>
+                    </p>
+                    <p>
+                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">select number of groups:</span></label>
+                        <input id="group" type="number">
+                    </p>
+                    <p>
+                        <button type="button" id="btn-reset" class="btn-custom-2" STYLE="width:100px;height:40px;font-size:14.0pt;margin:18px;" onclick="resetForm()">Make Groups</button>
+                    </p>
+                </form>
+            </div>
+            <div id="output_space">
+                <table>
+                </table>
+            </div>
+        </div></main>
         <script src="./index.js" async defer></script>
     </body>
 </html>
