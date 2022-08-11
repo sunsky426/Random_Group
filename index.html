@@ -34,6 +34,7 @@
     </style>
 
     <body>
+    <main>
         <div><center>
             <div>
                 <h1>Random Group</h1>
@@ -43,15 +44,15 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, officiis quaerat laboriosam fugit quisquam mollitia molestias nisi expedita quidem ducimus debitis vero eaque amet id laudantium soluta commodi, maxime autem!
             </div>
         </center></div>
-        <main><div align="center" height="100%">
-            <div id="input_space">
-                <form id="form" method="POST" action="input-step1.jsp" enctype="multipart/form-data">
+        <div>
+            <div id="input_space" class="space">
+                <form id="form">
                     <p>
-                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">input students names:</span></label>
-                        <textarea name="" id="names" cols="50" rows="10"></textarea>
+                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Input Students Names:</span></label>
+                        <textarea name="" id="names"></textarea>
                     </p>
                     <p>
-                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">select number of groups:</span></label>
+                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Select Number of Groups:</span></label>
                         <input id="group" type="number">
                     </p>
                     <p>
@@ -59,11 +60,12 @@
                     </p>
                 </form>
             </div>
-            <div id="output_space">
+            <div id="output_space" class="space">
                 <table>
                 </table>
             </div>
-        </div></main>
+        </div>
+    </main>
         <script src="./index.js" async defer></script>
     </body>
 </html>
