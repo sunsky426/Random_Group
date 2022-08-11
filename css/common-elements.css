@@ -1,0 +1,112 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #b3b1b1;
+	display: flex;
+	justify-content: center;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+    min-height: 80%;
+    max-height: 80%;
+	min-width: 100%;
+    max-width: 100%;
+}
+
+main {
+	background: radial-gradient(ellipse at bottom left, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)), linear-gradient(135deg, #670d10, #092756);
+	height: 100%;
+	width: 60%;
+	line-height: 1.5em;
+	margin: 80px 4em 0;
+	color: #f5f5f5;
+	box-shadow: 0px 50px 100px -8px rgba(0, 0, 0,.7);
+}
+
+h1 {
+	max-width: 49rem;	  
+	line-height: 1em;
+	font-weight: 700;
+	font-size: 3.5em;
+	margin: 0.25em auto;
+	font-size: 2.6em;
+	margin: 1.4em auto;
+}
+
+h2 {
+	max-width: 49rem;
+	margin: 1.4em auto;
+}
+
+p {
+	max-width: 49rem;
+	line-height: 1.5em;
+	margin: 1.4em auto;	 
+	font-size: 1em;
+	font-weight: 300;
+}
+
+form{
+	width: 100%;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+textarea{
+	width: 80%;
+	height: 300px;
+}
+
+label{
+	font-size: large;
+	font-weight: bold;
+	background: transparent;
+	outline: none;
+	color: white;
+}
+	
+svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	fill: none;
+	stroke: #fff;
+	stroke-dasharray: 150 480;
+	stroke-dashoffset: 150;
+	transition: 1s ease-in-out;
+}
+
+input[type=radio]:hover{
+	cursor: pointer;
+}	
+
+input[type="checkbox"]{
+	cursor: pointer;
+}
+
+select:required:invalid {
+	color: gray;
+}
+option[value=""][disabled] {
+	display: none;
+}
+option {
+	color: black;
+}
+
+.space{
+	display: flex;
+	justify-content: center;
+	border: 2px solid white;
+	min-height: 40px;
+	width: 80%;
+	margin: auto;
+	margin-top: 3%;
+	border-radius: 50px;
+}
+
