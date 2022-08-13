@@ -113,6 +113,7 @@ option {
 }
 
 .output_space{
+	padding: 20px;
 	background: #e7e5db;
 	border: 2px solid #e9e7da;
 	width: 100%;
