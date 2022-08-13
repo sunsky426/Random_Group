@@ -1,10 +1,12 @@
 async function make_groups(){
-    check_valid;
+    $("body").css("cursor", "progress");
+    check_valid();
     let names = extract_names();
     let numbers = await extract_random(1, names.length);
     let groupd = group_names(names, numbers, 6);
     console.log(groupd);
     display_output(groupd);
+    $("body").css("cursor", "default");
 }
 
 async function extract_random(min, max){
@@ -48,14 +50,11 @@ function display_output(groupd){
     for(let i=0; i<group_num; i++){
         let name_list = groupd[i];
 
-        output = output.concat(`<div class='name_list'><table style="width:100%; margin-left:10px; margin-right:10px"`)
+        output = output.concat(`<div class='name_list'><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:10px; margin-bottom:10px">`)
         for(let j=0; j<name_list.length; j++){
-            if(j%3==0){
-                output = output.concat('</tr><tr>')
-            }
-            output = output.concat(`<td>${name_list[j]}</td>`)
+            output = output.concat(`<nobr>${name_list[j]}</nobr> &emsp;`)
         }
-        output = output.concat('</tr></table></div>')
+        output = output.concat('</p></div>')
     }
     $space.append(output);
     return;
@@ -71,4 +70,10 @@ function check_valid(){
         alertModal(warningInfoHTML);
         return;
     }
+}
+
+function reset(){
+    $("#group").empty();
+    $("#names").empty();
+    $("output_space").empty();
 }

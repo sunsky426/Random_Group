@@ -100,7 +100,7 @@ option {
 
 .space{
 	display: flex;
-	width: 80%;
+	width: 100%;
 	margin: auto;
 	margin-top: 3%;
 }
@@ -135,6 +135,13 @@ option {
 	margin-bottom: 10px;
 	border: 2px solid #6d7993;
 	color: #6d7993;
-	border-radius: 30px;
+	border-radius: 20px;
+}
+
+.shuffle {
+	margin-left: 25px;
+	margin-right: 25px;
+	vertical-align: middle;
+	margin-top: 200px;
 }
 
