@@ -39,21 +39,25 @@ function group_names(names, numbers){
 }
 
 function display_output(groupd){
-    var $table = $("#output_table");
-    $table.empty();
+    var $space = $("#output_space");
+    $space.empty();
 
     var group_num = $("#group").val();
 	
     var output = "";
     for(let i=0; i<group_num; i++){
         let name_list = groupd[i];
-        output = output.concat(`<tr><td>Group${i}</td>`)
+
+        output = output.concat(`<div class='name_list'><table style="width:100%; margin-left:10px; margin-right:10px"`)
         for(let j=0; j<name_list.length; j++){
+            if(j%3==0){
+                output = output.concat('</tr><tr>')
+            }
             output = output.concat(`<td>${name_list[j]}</td>`)
         }
-        output = output.concat('</tr>')
+        output = output.concat('</tr></table></div>')
     }
-    $table.append(output);
+    $space.append(output);
     return;
 }
 

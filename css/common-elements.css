@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-	background: #b3b1b1;
+	background: #6d7993;
 	display: flex;
 	justify-content: center;
 }
@@ -12,20 +12,19 @@ body {
 textarea {
     resize: none;
     overflow-y: scroll;
-    min-height: 80%;
-    max-height: 80%;
+    min-height: 70%;
+    max-height: 100%;
 	min-width: 100%;
     max-width: 100%;
 }
 
 main {
-	background: radial-gradient(ellipse at bottom left, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)), linear-gradient(135deg, #670d10, #092756);
+	/* radial-gradient(ellipse at bottom left, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)), linear-gradient(135deg, #670d10, #092756); */
 	height: 100%;
 	width: 70%;
 	line-height: 1.5em;
-	margin: 80px 4em 0;
-	color: #f5f5f5;
-	box-shadow: 0px 50px 100px -8px rgba(0, 0, 0,.7);
+	color: white;
+	/* margin: 80px 4em 0; */
 }
 
 h1 {
@@ -101,11 +100,41 @@ option {
 
 .space{
 	display: flex;
-	justify-content: center;
-	border: 2px solid white;
 	width: 80%;
 	margin: auto;
 	margin-top: 3%;
+}
+
+.input_space{
+	display: flex;
+	float: left;
+	border: 2px solid #e9e7da;
+	width: 100%;
+	margin: auto;
+	margin-top: 3%;
 	border-radius: 50px;
+	height: 518px;
+}
+
+.output_space{
+	/* display: flex;
+	justify-content: center; */
+	background: #e7e5db;
+	border: 2px solid #e9e7da;
+	width: 100%;
+	margin-top: 3%;
+	border-radius: 50px;
+	overflow-y: auto;
+	height: 518px;
+}
+
+.name_list {
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: 2px solid #6d7993;
+	color: #6d7993;
+	border-radius: 30px;
 }
 
