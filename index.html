@@ -41,30 +41,31 @@
                 <h1>Random Group</h1>
                 <h2>the True Random Group Generator</h2>
             </div>
-            <div>
+            <div><p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, officiis quaerat laboriosam fugit quisquam mollitia molestias nisi expedita quidem ducimus debitis vero eaque amet id laudantium soluta commodi, maxime autem!
-            </div>
+            </div></p></center>
         </center></div>
-        <div>
-            <div id="input_space" class="space">
+        <hr>
+        <div class = "space">
+            <div id="input_space" class="input_space">
                 <form id="form">
                     <p>
                         <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Input Students Names:</span></label>
                         <textarea name="" id="names"></textarea>
-                    </p>
-                    <p>
-                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Select Number of Groups:</span></label>
+                        
+                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Number of Groups:</span></label>
                         <input id="group" type="number">
                     </p>
-                    <p>
-                        <button type="button" id="make_group" class="btn-custom-2" STYLE="width:100px;height:40px;font-size:14.0pt;margin:18px;" onclick="make_groups()">Make Groups</button>
+                    <p align="center" >
+                        <button type="button" id="btn_go" class="btn" STYLE="width:60px;height:40px;font-size:14.0pt;margin:18px;" onclick="make_groups()">Go!</button>
+                        <button type="button" id="btn_reset" class="btn" STYLE="width:80px;height:40px;font-size:14.0pt;margin:18px;" onclick="make_groups()">Reset</button>
                     </p>
                 </form>
             </div>
-            <div id="output_space" class="space">
-                <table id="output_table">
-                </table>
+            <div style="width:100px">
+
             </div>
+            <div id="output_space" class="output_space"></div>
         </div>
     </main>
         <script src="./index.js"></script>
