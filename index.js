@@ -72,3 +72,9 @@ function check_valid(){
         return;
     }
 }
+
+function reset(){
+    $("#group").empty();
+    $("#output_space").empty();
+    $("#names").empty();
+}
