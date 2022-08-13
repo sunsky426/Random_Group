@@ -50,7 +50,10 @@ function display_output(groupd){
     for(let i=0; i<group_num; i++){
         let name_list = groupd[i];
 
-        output = output.concat(`<div class='name_list'><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:10px; margin-bottom:10px">`)
+        if(i != 0){
+            output = output.concat("<hr style = 'color: #6d7993; width: 95%; margin-top: 0px; margin-bottom: 0px'></hr>");
+        }
+        output = output.concat(`<div class='name_list'><p style='margin-top:0px; margin-bottom:0px'>Group ${i + 1}:</p><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:0px; margin-bottom:10px">`)
         for(let j=0; j<name_list.length; j++){
             output = output.concat(`<nobr>${name_list[j]}</nobr> &emsp;`)
         }
