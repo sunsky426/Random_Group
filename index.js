@@ -1,12 +1,16 @@
 async function make_groups(){
     $("body").css("cursor", "progress");
-    check_valid();
     let names = extract_names();
+    if (!check_valid(names)){
+        $("body").css("cursor", "default");
+        return;
+    };
     let numbers = await extract_random(1, names.length);
     let groupd = group_names(names, numbers, 6);
     console.log(groupd);
     display_output(groupd);
     $("body").css("cursor", "default");
+    return;
 }
 
 async function extract_random(min, max){
@@ -53,7 +57,7 @@ function display_output(groupd){
         if(i != 0){
             output = output.concat("<hr style = 'color: #6d7993; width: 95%; margin-top: 0px; margin-bottom: 0px'></hr>");
         }
-        output = output.concat(`<div class='name_list'><p style='margin-top:0px; margin-bottom:0px; font-weight: bold'>Group ${i + 1}:</p><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:0px; margin-bottom:10px">`)
+        output = output.concat(`<div class='name_list'><p style='margin-top:0px; margin-bottom:0px; font-weight: bold'><i class="fa fa-users"></i>&nbsp; Group ${i + 1}:</p><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:0px; margin-bottom:10px">`)
         for(let j=0; j<name_list.length; j++){
             output = output.concat(`<nobr>${name_list[j]}</nobr> &emsp;`)
         }
@@ -63,20 +67,32 @@ function display_output(groupd){
     return;
 }
 
-function check_valid(){
-    var group_num = parseInt($("#group").val());
-    if(group_num < 0){group_num=0};
+function check_valid(text_vec){
+    let group_num = $("#group").val();
+    let name_len = text_vec.length;
     
     var warningInfoHTML="";
-    if(group_num == 0){
-        warningInfoHTML="<span style='font-weight:bold;font-size:14pt'>Warning: </span> &nbsp;&nbsp null or zeo number of sample, please enter sample replicates (at least 1)!";
-        alertModal(warningInfoHTML);
-        return;
+    
+    if(name_len <= 1){
+        warningInfoHTML=`<span style='font-weight:bold;font-size:14pt'>Warning: </span> Why bother making groups when there's only ${name_len} student in the class?`;
+    }else if(!group_num.match("^[0-9]+$")){
+        warningInfoHTML="<span style='font-weight:bold;font-size:14pt'>Warning: </span> Number of groups must be an positive integer";
+    }else if(group_num > name_len){
+        warningInfoHTML="<span style='font-weight:bold;font-size:14pt'>Warning: </span> Number of Students cannot be lower than the number of groups";
+    }else{
+        return true;
     }
+    alertModal(warningInfoHTML);
+    return false;
 }
 
 function reset(){
     $("#group").empty();
     $("#names").empty();
     $("#output_space").empty();
+}
+
+function alertModal(alertTxt){
+    document.getElementById("modalAlert-P").innerHTML=alertTxt;	
+    $("#modalAlert").modal({closeExisting: false});
 }
