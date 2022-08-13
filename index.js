@@ -86,9 +86,7 @@ function check_valid(text_vec){
     return false;
 }
 
-function reset(){
-    $("#group").empty();
-    $("#names").empty();
+function reset_output(){
     $("#output_space").empty();
 }
 

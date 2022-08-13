@@ -102,7 +102,7 @@ option {
 	width: 100%;
 }
 
-.input_space{
+#input_space{
 	display: flex;
 	justify-content: center;
 	border: 2px solid #e9e7da;
@@ -112,7 +112,7 @@ option {
 	height: 518px;
 }
 
-.output_space{
+#output_space{
 	padding: 20px;
 	background: #e7e5db;
 	border: 2px solid #e9e7da;
