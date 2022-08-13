@@ -46,26 +46,35 @@
             </div></p></center>
         </center></div>
         <hr style="color:#e7e5db">
+        
         <div class = "space">
-            <div id="input_space" class="input_space">
-                <form id="form">
-                    <p>
-                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Input Students Names:</span></label>
-                        <textarea name="" id="names"></textarea>
+            <div class = "side_panel">
+                <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Input</span></label></div>
+                <div id="input_space" class="input_space">
+                    <form id="form">
                         
-                        <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Number of Groups:</span></label>
-                        <input id="group" type="number">
-                    </p>
-                    <p align="center" >
-                        <button type="button" id="btn_go" class="btn" STYLE="width:60px;height:40px;font-size:14.0pt;margin:18px;" onclick="make_groups()">Go!</button>
-                        <button type="button" id="btn_reset" class="btn" STYLE="width:80px;height:40px;font-size:14.0pt;margin:18px;" onclick="reset()">Reset</button>
-                    </p>
-                </form>
+                        <p>
+                            <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Students Names:</span></label>
+                            <textarea name="" id="names"></textarea>
+                        </p>
+                        <p>
+                            <label for="names"><span class="label-custom" STYLE="font-size:14.0pt">Number of Groups:</span></label>
+                            <input id="group" type="number">
+                        </p>
+                        <p align="center" >
+                            <button type="button" id="btn_go" class="btn" STYLE="width:60px;height:40px;font-size:14.0pt;margin:18px;" onclick="make_groups()">Go!</button>
+                            <button type="button" id="btn_reset" class="btn" STYLE="width:80px;height:40px;font-size:14.0pt;margin:18px;" onclick="reset()">Reset</button>
+                        </p>
+                    </form>
+                </div>
             </div>
             <div style="width:200px; text-align: center;">
                 <img src = "./shuffle.png" width="150px" height="130px" class = "shuffle">
             </div>
-            <div id="output_space" class="output_space"></div>
+            <div class = "side_panel">
+                <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Output</span></label></div>
+                <div id="output_space" class="output_space"></div>
+            </div>
         </div>
     </main>
         <script src="./index.js"></script>

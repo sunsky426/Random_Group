@@ -75,5 +75,5 @@ function check_valid(){
 function reset(){
     $("#group").empty();
     $("#names").empty();
-    $("output_space").empty();
+    $("#output_space").empty();
 }
