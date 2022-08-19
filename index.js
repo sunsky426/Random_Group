@@ -45,7 +45,7 @@ function group_names(names, numbers){
 }
 
 function display_output(groupd){
-    var $space = $("#output_space");
+    var $space = $("#output");
     $space.empty();
 
     var group_num = $("#group").val();
