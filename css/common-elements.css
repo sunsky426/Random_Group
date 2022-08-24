@@ -137,7 +137,44 @@ option {
 	margin-top: 200px;
 }
 
-.discript{
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	font-size: larger;
+	font-weight: bold;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+	background-color: white;
+	color: #6d7993;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+.descript {
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
 	size: large;
 	font-family: Arial;
+}
+
+#instruction_title{
+	margin-top: 20px;
+	font-size: larger;
+	font-family: arial;
+}
+
+#instructions {
+	font-size: medium;
+	font-family: arial;
+	margin-left: 10%;
 }

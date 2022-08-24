@@ -94,3 +94,12 @@ function alertModal(alertTxt){
     document.getElementById("modalAlert-P").innerHTML=alertTxt;	
     $("#modalAlert").modal({closeExisting: false});
 }
+
+function collapse(id_num){
+    var content = $(`#collapsable_content_${id_num}`);
+    if(content.css("display") == "none"){
+        content.css("display", "block");
+    }else{
+        content.css("display", "none");
+    }
+}
