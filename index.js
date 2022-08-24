@@ -45,7 +45,7 @@ function group_names(names, numbers){
 }
 
 function display_output(groupd){
-    var $space = $("#output_space");
+    var $space = $("#output");
     $space.empty();
 
     var group_num = $("#group").val();
@@ -93,4 +93,13 @@ function reset_output(){
 function alertModal(alertTxt){
     document.getElementById("modalAlert-P").innerHTML=alertTxt;	
     $("#modalAlert").modal({closeExisting: false});
+}
+
+function collapse(id_num){
+    var content = $(`#collapsable_content_${id_num}`);
+    if(content.css("display") == "none"){
+        content.css("display", "block");
+    }else{
+        content.css("display", "none");
+    }
 }
