@@ -105,7 +105,7 @@ option {
 #input_space{
 	display: flex;
 	justify-content: center;
-	border: 2px solid #e9e7da;
+	border: 2px solid white;
 	width: 100%;
 	margin: auto;
 	border-radius: 50px;
@@ -113,8 +113,8 @@ option {
 }
 
 #output_space{
-	background: #e7e5db;
-	border: 2px solid #e9e7da;
+	background: white;
+	border: 2px solid white;
 	width: 100%;
 	border-radius: 50px;
 	overflow-y: auto;
