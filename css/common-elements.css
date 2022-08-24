@@ -122,6 +122,7 @@ option {
 }
 
 .name_list {
+	cursor: text;
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-top: 10px;
@@ -140,6 +141,7 @@ option {
 
  /* Style the button that is used to open and close the collapsible content */
  .collapsible {
+	transition: all .5s ease;
 	background-color: transparent;
 	color: white;
 	cursor: pointer;
@@ -160,6 +162,7 @@ option {
   
   /* Style the collapsible content. Note: hidden by default */
 .descript {
+	cursor: text;
 	padding: 0 18px;
 	display: none;
 	overflow: hidden;
@@ -168,12 +171,14 @@ option {
 }
 
 #instruction_title{
+	cursor: text;
 	margin-top: 20px;
 	font-size: larger;
 	font-family: arial;
 }
 
 #instructions {
+	cursor: text;
 	font-size: medium;
 	font-family: arial;
 	margin-left: 10%;
