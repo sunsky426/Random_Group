@@ -103,3 +103,20 @@ function collapse(id_num){
         content.css("display", "none");
     }
 }
+
+
+var doc = new jsPDF();
+
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#save').click(function () {
+    doc.fromHTML($('#output_space').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
