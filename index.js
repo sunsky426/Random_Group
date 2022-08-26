@@ -113,7 +113,7 @@ var specialElementHandlers = {
     }
 };
 
-$('#save').click(function () {
+$('#save_btn').click(function () {
     doc.fromHTML($('#output_space').html(), 15, 15, {
         'width': 170,
             'elementHandlers': specialElementHandlers
