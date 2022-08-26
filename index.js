@@ -26,7 +26,10 @@ async function extract_random(min, max){
 }
 
 function extract_names(){
-    let raw_text = names.value;
+    let raw_text = names.value.trim();
+    if(!raw_text){
+        return null;
+    }
     let text_vec = raw_text.split("\n");
     return text_vec;
 }
@@ -68,13 +71,17 @@ function display_output(groupd){
 }
 
 function check_valid(text_vec){
+    if(text_vec == null){
+        alertModal("<span style='font-weight:bold;font-size:14pt'>Warning: </span> Why bother making groups when there no student in the class?");
+        return false;
+    }
     let group_num = $("#group").val();
     let name_len = text_vec.length;
     
     var warningInfoHTML="";
     
-    if(name_len <= 1){
-        warningInfoHTML=`<span style='font-weight:bold;font-size:14pt'>Warning: </span> Why bother making groups when there's only ${name_len} student in the class?`;
+    if(name_len == 1){
+        warningInfoHTML="<span style='font-weight:bold;font-size:14pt'>Warning: </span> Why bother making groups when there's only 1 student in the class?";
     }else if(!group_num.match("^[0-9]+$")){
         warningInfoHTML="<span style='font-weight:bold;font-size:14pt'>Warning: </span> Number of groups must be an positive integer";
     }else if(group_num > name_len){
