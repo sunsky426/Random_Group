@@ -115,18 +115,27 @@ function collapse(id_num){
 }
 
 
-var doc = new jsPDF();
+function savepdf() {
+    alert("What?")
+    // date and time
+    let date = new Date();
 
-var specialElementHandlers = {
-    '#editor': function (element, renderer) {
-        return true;
-    }
-};
+    // build html element
+    let $2pdf = $("#output").clone();
+    $2pdf.prepend(`<h>Student Grouping from ${date.toDateString()}</h>`)    
+    
+    // make pdf from html
+    let doc = new jsPDF();
 
-$('#save_btn').click(function () {
-    doc.fromHTML($('#output_space').html(), 15, 15, {
+    let specialElementHandlers = {
+        '#editor': function (element, renderer) {
+            return true;
+        }
+    };
+    
+    doc.fromHTML($2pdf.html(), 15, 15, {
         'width': 170,
             'elementHandlers': specialElementHandlers
     });
     doc.save('sample-file.pdf');
-});
+}
