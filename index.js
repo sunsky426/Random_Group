@@ -123,7 +123,7 @@ function savepdf() {
     let $2pdf = $("#output").clone();
     alert($2pdf.html());
     $2pdf.html(function(){
-        return $2pdf.html().replace(/\u2003/g, "|");
+        return $2pdf.html().replace(/\u2003/g, "| &nbsp;");
     });
     alert($2pdf.html());
     $2pdf.prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`);  
