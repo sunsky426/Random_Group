@@ -116,26 +116,16 @@ function collapse(id_num){
 
 
 function savepdf() {
-    alert("What?")
     // date and time
     let date = new Date();
 
     // build html element
     let $2pdf = $("#output").clone();
-    $2pdf.prepend(`<h>Student Grouping from ${date.toDateString()}</h>`)    
+    $2pdf.prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`)    
     
     // make pdf from html
     let doc = new jsPDF();
 
-    let specialElementHandlers = {
-        '#editor': function (element, renderer) {
-            return true;
-        }
-    };
-    
-    doc.fromHTML($2pdf.html(), 15, 15, {
-        'width': 170,
-            'elementHandlers': specialElementHandlers
-    });
-    doc.save('sample-file.pdf');
+    doc.fromHTML($2pdf.html(), 15, 15);
+    doc.save(`StudentGroup_${date.toISOString().substring(10,0)}.pdf`);
 }
