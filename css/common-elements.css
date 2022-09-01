@@ -122,16 +122,8 @@ option {
 	border: 2px solid var(--main);
 	width: 100%;
 	border-radius: 50px;
-	height: 518px;
-}
-
-#output {
-	height: 460px;
 	overflow-y: auto;
-	margin-top: 20px;
-	margin-bottom: 5px;
-	margin-left: 20px;
-	margin-right: 20px
+	height: 518px;
 }
 
 .name_list {
