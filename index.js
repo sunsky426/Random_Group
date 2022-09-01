@@ -62,11 +62,15 @@ function display_output(groupd){
         }
         output = output.concat(`<div class='name_list'><p style='margin-top:0px; margin-bottom:0px; font-weight: bold'><i class="fa fa-users"></i>&nbsp; Group ${i + 1}:</p><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:0px; margin-bottom:10px">`)
         for(let j=0; j<name_list.length; j++){
-            output = output.concat(`<nobr>${name_list[j]}</nobr> &emsp;`)
+            output = output.concat(`<nobr>${name_list[j]}</nobr> &emsp;`);
         }
-        output = output.concat('</p></div>')
+        output = output.slice(0, -7); // remove trailing emsp
+        output = output.concat('</p></div>');
     }
     $space.append(output);
+
+    $("#save_btn").css("display", "block");
+
     return;
 }
 
@@ -109,4 +113,22 @@ function collapse(id_num){
     }else{
         content.css("display", "none");
     }
+}
+
+function savepdf() {
+    // date and time
+    let date = new Date();
+
+    // build html element
+    let $2pdf = $("#output").clone();
+    $2pdf.html(function(){
+        return $2pdf.html().replace(/\u2003/g, "| &nbsp;");
+    });
+    $2pdf.prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`);  
+    
+    // make pdf from html
+    let doc = new jsPDF();
+
+    doc.fromHTML($2pdf.html(), 15, 15);
+    doc.save(`StudentGroup_${date.toISOString().substring(10,0)}.pdf`);
 }
