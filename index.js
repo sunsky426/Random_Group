@@ -115,20 +115,33 @@ function collapse(id_num){
     }
 }
 
-function savepdf() {
+function savehtml() {
     // date and time
     let date = new Date();
 
-    // build html element
-    let $2pdf = $("#output").clone();
-    $2pdf.html(function(){
-        return $2pdf.html().replace(/\u2003/g, "| &nbsp;");
-    });
-    $2pdf.prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`);  
+    //created html file to download
+    let $2download = $(`<!DOCTYPE html><html lang="en"><head><title>Student Grouping from ${date.toDateString()}</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="description" content="" /><style></style></head><body></body></html>`);
+    $2download.find("body").append($("#output_panel").html());
+    $2download.find("#save_btn").remove();
+    $2download.find("label").remove();
+    $2download.find("#output").prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`);
     
-    // make pdf from html
-    let doc = new jsPDF();
+    alert("passed");
 
-    doc.fromHTML($2pdf.html(), 15, 15);
-    doc.save(`StudentGroup_${date.toISOString().substring(10,0)}.pdf`);
+    //set up css
+    let css2download = "<style>#output_space{background: var(--main);border: 2px solid var(--main);width: 100%;border-radius: 50px;height: 518px;}#output {height: 460px;overflow-y: auto;margin-top: 20px;margin-bottom: 5px;margin-left: 20px;margin-right: 20px}.name_list {cursor: text;margin-right: 10px;margin-left: 10px;margin-top: 10px;margin-bottom: 10px;color: var(--background);border-radius: 20px;}</style>";
+    //css2download = css2download.concat(getComputedStyle(document.getElementById("output_space")).cssText);
+    //css2download = css2download.concat(getComputedStyle(document.getElementById("output")).cssText);
+    //css2download = css2download.concat("</style>");
+    $2download.find("style").prepend(css2download);
+    alert($2download.html());
+
+    //download html file
+    const download = document.createElement("a");
+    download.href = 'data:text/html;charset=UTF-8,'+ encodeURIComponent($2download.html());
+    download.download = `StudentGroup_${date.toISOString().substring(10,0)}.html`;
+
+    document.body.appendChild(download);
+    //download.click();
+    document.body.removeChild(download);
 }
