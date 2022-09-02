@@ -120,12 +120,13 @@ function savepdf() {
     let date = new Date();
 
     // build html element
-    let $2pdf = $("#output_panel").clone();
+    let $2pdf = $("#output_space").clone();
     $2pdf.find("#save_btn").remove();
-    $2pdf.find("label").text(`Student Grouping from ${date.toDateString()}`);
-    //$2pdf.prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`);  
     
     // print pdf
-    $2pdf.printThis({pageTitle: `StudentGroup_${date.toISOString().substring(10,0)}`, loadCSS: "css/common-elements.css"})
-    //doc.save(`StudentGroup_${date.toISOString().substring(10,0)}.pdf`);
+    $2pdf.printThis({
+        pageTitle: `StudentGroup_${date.toISOString().substring(10,0)}`, 
+        loadCSS: "css/download.css", 
+        importCSS: false,
+        header: `<center><h2><b>Student Grouping from ${date.toDateString()}</b></h2></center>`})
 }
