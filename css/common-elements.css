@@ -1,15 +1,10 @@
-:root{
-	--background: #6d7993;
-	--main: white;
-}
-
 html, body {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	background: var(--background);
+	background: #6d7993;
 	display: flex;
 	justify-content: center;
 }
@@ -26,7 +21,7 @@ main {
 	height: 100%;
 	width: 70%;
 	line-height: 1.5em;
-	color: var(--main);
+	color: white;
 	/* margin: 80px 4em 0; */
 }
 
@@ -64,7 +59,7 @@ label{
 	font-weight: bold;
 	background: transparent;
 	outline: none;
-	color: var(--main);
+	color: white;
 }
 	
 svg {
@@ -110,7 +105,7 @@ option {
 #input_space{
 	display: flex;
 	justify-content: center;
-	border: 2px solid var(--main);
+	border: 2px solid white;
 	width: 100%;
 	margin: auto;
 	border-radius: 50px;
@@ -118,12 +113,20 @@ option {
 }
 
 #output_space{
-	background: var(--main);
-	border: 2px solid var(--main);
+	background: white;
+	border: 2px solid white;
 	width: 100%;
 	border-radius: 50px;
-	overflow-y: auto;
 	height: 518px;
+}
+
+#output {
+	height: 460px;
+	overflow-y: auto;
+	margin-top: 20px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+	margin-right: 20px
 }
 
 .name_list {
@@ -132,7 +135,7 @@ option {
 	margin-left: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	color: var(--background);
+	color: #6d7993;
 	border-radius: 20px;
 }
 
@@ -148,7 +151,7 @@ option {
  .collapsible {
 	transition: all .5s ease;
 	background-color: transparent;
-	color: var(--main);
+	color: white;
 	cursor: pointer;
 	width: 100%;
 	border: none;
@@ -161,8 +164,8 @@ option {
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
-	background-color: var(--main);
-	color: var(--background);
+	background-color: white;
+	color: #6d7993;
   }
   
   /* Style the collapsible content. Note: hidden by default */
@@ -187,8 +190,4 @@ option {
 	font-size: medium;
 	font-family: arial;
 	margin-left: 10%;
-}
-
-a {
-	color: rgb(165, 200, 224);
 }
