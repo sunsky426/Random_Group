@@ -67,6 +67,9 @@ function display_output(groupd){
         output = output.concat('</p></div>')
     }
     $space.append(output);
+
+    $("#save_btn").css("display", "block");
+
     return;
 }
 
