@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
         
+        <!-- print this -->
+        <script src="node_modules/printthis/printThis.js"></script>
     </head>
 
     <style>	
@@ -98,7 +100,7 @@
             <div style="width:200px; text-align: center;">
                 <img src = "./shuffle.png" width="150px" height="130px" class = "shuffle">
             </div>
-            <div class = "side_panel">
+            <div class = "side_panel" id="output_panel">
                 <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Output</span></label></div>
                 <div id="output_space"><div id="output"></div>
                 <center><button id = "save_btn" style = "display: none;" onclick="savepdf()">Save to PDF</button></center>

@@ -120,15 +120,12 @@ function savepdf() {
     let date = new Date();
 
     // build html element
-    let $2pdf = $("#output").clone();
-    $2pdf.html(function(){
-        return $2pdf.html().replace(/\u2003/g, "| &nbsp;");
-    });
-    $2pdf.prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`);  
+    let $2pdf = $("#output_panel").clone();
+    $2pdf.find("#save_btn").remove();
+    $2pdf.find("label").text(`Student Grouping from ${date.toDateString()}`);
+    //$2pdf.prepend(`<center><h><b>Student Grouping from ${date.toDateString()}</b></h></center><br>`);  
     
-    // make pdf from html
-    let doc = new jsPDF();
-
-    doc.fromHTML($2pdf.html(), 15, 15);
-    doc.save(`StudentGroup_${date.toISOString().substring(10,0)}.pdf`);
+    // print pdf
+    $2pdf.printThis({pageTitle: `StudentGroup_${date.toISOString().substring(10,0)}`, loadCSS: "css/common-elements.css"})
+    //doc.save(`StudentGroup_${date.toISOString().substring(10,0)}.pdf`);
 }
