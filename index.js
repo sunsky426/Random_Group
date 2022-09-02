@@ -110,3 +110,19 @@ function collapse(id_num){
         content.css("display", "none");
     }
 }
+
+function savepdf() {
+    // date and time
+    let date = new Date();
+
+    // build html element
+    let $2pdf = $("#output_space").clone();
+    $2pdf.find("#save_btn").remove();
+    
+    // print pdf
+    $2pdf.printThis({
+        pageTitle: `StudentGroup_${date.toISOString().substring(10,0)}`, 
+        loadCSS: "css/download.css", 
+        importCSS: false,
+        header: `<center><h2><b>Student Grouping from ${date.toDateString()}</b></h2></center>`})
+}
