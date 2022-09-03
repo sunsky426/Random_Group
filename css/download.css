@@ -1,5 +1,6 @@
 #output_space{
 	background: white;
+	border: 2px solid #6d7993;
 	width: 100%;
 	border-radius: 50px;
 	height: auto;
