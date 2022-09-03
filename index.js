@@ -125,7 +125,7 @@ function savepdf() {
     // print pdf
     $2pdf.printThis({
         pageTitle: `StudentGroup_${date.toISOString().substring(10,0)}`, 
-        loadCSS: "https://sunsky426.github.io/Random_Group/css/download.css", 
+        loadCSS: "https://sunsky426.github.io/random_group/css/download.css", 
         importCSS: false,
         header: `<center><h2><b>Student Grouping from ${date.toDateString()}</b></h2></center>`})
 }
