@@ -4,4 +4,4 @@ Random Group is a group maker for school and clubs that utilizes truly random ge
 
 Dedicated to my teacher who thinks that Random Group generators available on the internet aren't random enough.
 
-Access this Generator at https://sunsky426.github.io/Random_Group/
+Access this Generator at https://sunsky426.github.io/random_group/
