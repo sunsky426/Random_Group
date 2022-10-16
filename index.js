@@ -53,18 +53,23 @@ function display_output(groupd){
 
     var group_num = $("#group").val();
 	
-    var output = "";
+    var output = "<table style = 'width: 100%'>";
     for(let i=0; i<group_num; i++){
         let name_list = groupd[i];
 
-        if(i != 0){
-            output = output.concat("<hr style = 'color: #6d7993; width: 95%; margin-top: 0px; margin-bottom: 0px'></hr>");
+        if((i != 0) & (i % 3 == 0)){
+            output = output.concat("<tr>");
         }
-        output = output.concat(`<div class='name_list'><p style='margin-top:0px; margin-bottom:0px; font-weight: bold'><i class="fa fa-users"></i>&nbsp; Group ${i + 1}:</p><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:0px; margin-bottom:10px">`)
+
+        output = output.concat(`<td><div class='name_list'><p style='margin-top:0px; margin-bottom:0px; font-weight: bold'><i class="fa fa-users"></i>&nbsp; Group ${i + 1}:</p><p style="width:100%; margin-left:10px; margin-right:10px; margin-top:0px; margin-bottom:10px">`)
         for(let j=0; j<name_list.length; j++){
             output = output.concat(`<nobr>${name_list[j]}</nobr> &emsp;`)
         }
-        output = output.concat('</p></div>')
+        output = output.concat('</p></div></td>')
+
+        if((i != 0) & (i % 3 == 0)){
+            output = output.concat("</tr>");
+        }
     }
     $space.append(output);
 

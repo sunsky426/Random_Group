@@ -48,7 +48,7 @@
             <center><div>
                 <h1 style="margin: 20px">True Random Group Generator</h1>
             </div></center>
-            <div>
+            <center><div id="descript_container">
                 <button type="button" class="collapsible" onclick="collapse(0)">What is True Randomness?</button>
                 <div class="descript" id="collapsable_content_0"><p>
                     Have you considered how predictable machines like computers generate randomness? The simple answer is they don't! Most random generator programs are pseudo-random, which means they generate numbers in a predictable fashion using a mathematical formula. These formula generator numbers are very close to random, but not truly random and can be predicted through various methods. True randomness, on the other hand, refers to randomness generated not by a predictable computer algorithm, but by nature, usually through the monitoring of acoustic and thermal noises. This website is an a true random group generator that anyone can use to generate groups for schools or clubs in a truly random fashion. 
@@ -60,7 +60,7 @@
                     This website does not track atmospheric noises ourselves, but thankfully, the much more famous and bigger true random website <a href="https://www.random.org/">Random.org</a> does. This website operates by requesting random numbers from <a href="https://www.random.org/">Random.org</a>, which we then use to generate random groups.
                 </p></div>
                 
-            </div>
+            </div></center>
         </div>
         <br>
         <hr style="color:#e7e5db">
@@ -78,7 +78,7 @@
         </div>
         
         <div class = "space">
-            <div class = "side_panel">
+            <div id = "input_panel">
                 <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Input</span></label></div>
                 <div id="input_space">
                     <form id="form">
@@ -101,7 +101,7 @@
             <div style="width:200px; text-align: center;">
                 <img src = "./shuffle.png" width="150px" height="130px" class = "shuffle">
             </div>
-            <div class = "side_panel" id="output_panel">
+            <div  id="output_panel">
                 <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Output</span></label></div>
                 <div id="output_space"><div id="output"></div>
                 <center><button id = "save_btn" style = "display: none;" onclick="savepdf()">Print or Save as PDF</button></center>

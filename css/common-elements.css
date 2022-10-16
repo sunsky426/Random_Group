@@ -17,14 +17,14 @@ body {
 textarea {
     resize: none;
     overflow-y: scroll;
-    height: 300px;
+    height: 350px;
 	width: 100%;
 }
 
 main {
 	/* radial-gradient(ellipse at bottom left, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)), linear-gradient(135deg, #670d10, #092756); */
 	height: 100%;
-	width: 70%;
+	width: 80%;
 	line-height: 1.5em;
 	color: var(--main);
 	/* margin: 80px 4em 0; */
@@ -103,8 +103,12 @@ option {
 	margin-top: 3%;
 }
 
-.side_panel{
-	width: 100%;
+#input_panel{
+	width: 35%;
+}
+
+#output_panel{
+	width: 55%;
 }
 
 #input_space{
@@ -114,7 +118,7 @@ option {
 	width: 100%;
 	margin: auto;
 	border-radius: 50px;
-	height: 518px;
+	height: 580px;
 }
 
 #output_space{
@@ -122,15 +126,15 @@ option {
 	border: 2px solid var(--main);
 	width: 100%;
 	border-radius: 50px;
-	height: 518px;
+	height: 580px;
 }
 
 #output {
-	height: 460px;
+	height: 500px;
 	overflow-y: auto;
-	margin-top: 20px;
+	margin-top: 25px;
 	margin-bottom: 5px;
-	margin-left: 20px;
+	margin-left: 40px;
 	margin-right: 20px
 }
 
@@ -181,6 +185,10 @@ option {
 	overflow: hidden;
 	size: large;
 	font-family: Arial;
+}
+
+#descript_container {
+	width: 80%;
 }
 
 #instruction_title{
