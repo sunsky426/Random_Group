@@ -102,6 +102,7 @@ function check_valid(text_vec){
 
 function reset_output(){
     $("#output").empty();
+    $("#save_btn").css("display", "none")
 }
 
 function alertModal(alertTxt){
