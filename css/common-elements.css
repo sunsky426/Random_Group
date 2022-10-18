@@ -103,10 +103,6 @@ option {
 	margin-top: 3%;
 }
 
-.side_panel{
-	width: 100%;
-}
-
 #input_space{
 	display: flex;
 	justify-content: center;
@@ -122,11 +118,10 @@ option {
 	border: 2px solid var(--main);
 	width: 100%;
 	border-radius: 50px;
-	height: 518px;
+	height: auto;
 }
 
 #output {
-	height: 460px;
 	overflow-y: auto;
 	margin-top: 20px;
 	margin-bottom: 5px;

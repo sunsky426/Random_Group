@@ -65,18 +65,22 @@
         <br>
         <hr style="color:#e7e5db">
         
-        
-    <div>
-        <center><h3><span id = instruction_title>Instructions:</span></h3></center>
-                <!-- <h3>Instructions:</h3> -->
-        <ol id = "instructions">
-            <li>Input the names you're going to group under the <i>names</i> field. Each name needs to be separated by a new line.</li>
-            <li>Select the number of groups you need</li>
-            <li>Click <b>GO</b></li>
-            <li>Wait for the results to appear under <i>output</i></li>
-        </ol>
+        <div>
+            <center><h3><span id = instruction_title>Instructions:</span></h3></center>
+                    <!-- <h3>Instructions:</h3> -->
+            <ol id = "instructions">
+                <li>Input the names you're going to group under the <i>names</i> field. Each name needs to be separated by a new line.</li>
+                <li>Select the number of groups you need</li>
+                <li>Click <b>GO</b></li>
+                <li>Wait for the results to appear under <i>output</i></li>
+            </ol>
         </div>
-        <div class = "side_panel">
+        <div id="output_panel">
+            <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Output</span></label></div>
+            <div id="output_space"><div id="output"></div>
+            <center><button id = "save_btn" style = "display: none;" onclick="savepdf()">Print or Save as PDF</button></center>
+        </div>
+        <div id="input_panel">
             <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Input</span></label></div>
             <div id="input_space">
                 <form id="form">
@@ -95,14 +99,6 @@
                     </p>
                 </form>
             </div>
-        </div>
-        <div style="width:200px; text-align: center;">
-            <img src = "./shuffle.png" width="150px" height="130px" class = "shuffle">
-        </div>
-        <div class = "side_panel" id="output_panel">
-            <div align="center"><label for="names"><span class="label-custom" STYLE="font-size:14.0pt;">Output</span></label></div>
-            <div id="output_space"><div id="output"></div>
-            <center><button id = "save_btn" style = "display: none;" onclick="savepdf()">Print or Save as PDF</button></center>
         </div>
     </main>
 
