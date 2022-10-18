@@ -24,7 +24,7 @@ textarea {
 main {
 	/* radial-gradient(ellipse at bottom left, rgba(104, 128, 138, 0.4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25), rgba(42, 60, 87, 0.4)), linear-gradient(135deg, #670d10, #092756); */
 	height: 100%;
-	width: 70%;
+	width: 85%;
 	line-height: 1.5em;
 	color: var(--main);
 	/* margin: 80px 4em 0; */
@@ -103,8 +103,8 @@ option {
 	margin-top: 3%;
 }
 
-.side_panel{
-	width: 100%;
+#input_panel{
+	width: 80%;
 }
 
 #input_space{
@@ -122,11 +122,10 @@ option {
 	border: 2px solid var(--main);
 	width: 100%;
 	border-radius: 50px;
-	height: 518px;
+	margin-bottom: 40px;
 }
 
 #output {
-	height: 460px;
 	overflow-y: auto;
 	margin-top: 20px;
 	margin-bottom: 5px;
@@ -135,7 +134,9 @@ option {
 }
 
 .name_list {
+	vertical-align: top;
 	cursor: text;
+	font-size: large;
 	margin-right: 10px;
 	margin-left: 10px;
 	margin-top: 10px;
@@ -199,4 +200,8 @@ option {
 
 a {
 	color: rgb(165, 200, 224);
+}
+
+#descript_panel{
+	width: 80%;
 }
