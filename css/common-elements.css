@@ -103,6 +103,10 @@ option {
 	margin-top: 3%;
 }
 
+#input_panel{
+	width: 80%;
+}
+
 #input_space{
 	display: flex;
 	justify-content: center;
@@ -197,4 +201,8 @@ option {
 
 a {
 	color: rgb(165, 200, 224);
+}
+
+#descript_panel{
+	width: 80%;
 }
